@@ -5,13 +5,20 @@ root = true
 
 # Unix-style newlines with a newline ending every file
 [*]
+charset = utf-8
 end_of_line = lf
+indent_size = 2
+indent_style = space
 insert_final_newline = true
+trim_trailing_whitespace = true
 
+[*.md]
+trim_trailing_whitespace = false
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{js,py}]
+[*.{py}]
 charset = utf-8
+
 
 # 4 space indentation
 [*.py]
@@ -31,3 +38,7 @@ indent_size = 2
 [{package.json,.travis.yml}]
 indent_style = space
 indent_size = 2
+
+[**.html]
+trim_trailing_whitespace = true
+
